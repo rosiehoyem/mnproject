@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Description</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,13 +10,10 @@
 
 <% @projects.each do |project| %>
   <tr>
-    <td><%= project.title %></td>
-    <td><%= project.description %></td>
+    <td><%= link_to project.title, project %></td>
     <td><%= pluralize(project.votes.length, "vote") %></td>
     <td><%= button_to '+1', votes_path(project_id: project.id), method: :post %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Delete', project, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 
