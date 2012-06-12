@@ -1,4 +1,10 @@
 Mnproject::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/contact"
+
+  get "pages/about"
+
   resources :votes
 
   resources :projects
