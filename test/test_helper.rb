@@ -9,5 +9,10 @@ class ActiveSupport::TestCase
   # -- they do not yet inherit this setting
   fixtures :all
 
+  require "webrat"
+    Webrat.configure do |config|
+    config.mode = :rails
+    end
+    
   # Add more helper methods to be used by all tests here...
 end
