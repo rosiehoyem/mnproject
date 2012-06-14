@@ -43,5 +43,11 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test, :development do
-gem 'rspec-rails'
+  gem 'rspec-rails'
+end
+
+gem 'bootstrap-sass', '~> 2.0.3'
+
+group :test do
+  gem 'capybara', '1.1.2'
 end

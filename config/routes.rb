@@ -1,9 +1,14 @@
 Mnproject::Application.routes.draw do
-  get "pages/home"
+  
+  get "users/new"
 
-  get "pages/contact"
-
-  get "pages/about"
+  root to: 'pages#home'
+  
+  match '/signup',  to: 'users#new'
+  
+  match '/about',   to: 'pages#about'
+  
+  match '/contact', to: 'pages#contact'
 
   resources :votes
 
